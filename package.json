@@ -1,0 +1,15 @@
+{
+  "name": "responsive-shopping-cart-js",
+  "version": "1.0.0",
+  "description": "A Simple Responsive Shopping Cart using plain Javascript",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kathirr007/ShoppingCart-Js.git"
+  },
+  "author": "Kathirr007",
+  "license": "MIT",
+  "homepage": "https://github.com/kathirr007/ShoppingCart-Js#readme",
+  "devDependencies": {},
+  "dependencies": {}
+}
