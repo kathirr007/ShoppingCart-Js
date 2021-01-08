@@ -22,8 +22,6 @@ window.onload = (function () {
       productsInCart = cart.items,
       cartItemsList = ''
 
-    console.log(productsInCart)
-
     for (let i = 0; i < productsInCart.length; i++) {
       let productId = createproductID(productsInCart[i].name),
         productName = productsInCart[i].name,
@@ -87,7 +85,6 @@ window.onload = (function () {
         if (productInCart.itemCount == undefined) {
           productInCart.itemCount = 1
         } else {
-          // debugger
           productInCart.itemCount++
         }
         itemTotalDisplayPrice =
@@ -142,11 +139,11 @@ window.onload = (function () {
             let priceArr = Array.from(
               document.querySelectorAll('.cart-list tbody .item-price')
             ).map(item => item.textContent * 1)
-            console.log(priceArr)
+
             let discountArr = Array.from(
               document.querySelectorAll('.cart-list tbody .item-discount')
             ).map(item => item.textContent * 1)
-            console.log(discountArr)
+
             let totalQty = qtyArray.reduce((acc, curr) => {
               return acc + curr
             }, 0)
@@ -156,7 +153,6 @@ window.onload = (function () {
             let totalDiscount = discountArr.reduce((acc, curr) => {
               return acc + curr
             }, 0)
-            // debugger
             document.querySelector('.total-qty').textContent = totalQty
             document.querySelector('.total-price').textContent = totalPrice
             document.querySelector(
@@ -168,9 +164,8 @@ window.onload = (function () {
             let inputValue = Number(e.target.value),
               itemName = e.target.dataset.name,
               itemClass = createproductID(itemName)
-            // debugger
             ht[itemName].itemCount = inputValue
-            console.log(ht[itemName])
+
             document.querySelector(`tr.${itemClass} .item-price`).textContent =
               productInCart.itemCount * productInCart.price.display
             document.querySelector(
@@ -197,7 +192,6 @@ window.onload = (function () {
         let totalDiscount = discountArr.reduce((acc, curr) => {
           return acc + curr
         }, 0)
-        // debugger
         document.querySelector('.total-qty').textContent = totalQty
         document.querySelector('.total-price').textContent = totalPrice
         document.querySelector('.total-discounts').textContent = totalDiscount

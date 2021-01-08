@@ -85,7 +85,6 @@ window.onload = (function () {
         if (productInCart.itemCount == undefined) {
           productInCart.itemCount = 1
         } else {
-          // debugger
           productInCart.itemCount++
         }
         itemTotalDisplayPrice =
@@ -154,7 +153,6 @@ window.onload = (function () {
             let totalDiscount = discountArr.reduce((acc, curr) => {
               return acc + curr
             }, 0)
-            // debugger
             document.querySelector('.total-qty').textContent = totalQty
             document.querySelector('.total-price').textContent = totalPrice
             document.querySelector(
@@ -166,7 +164,6 @@ window.onload = (function () {
             let inputValue = Number(e.target.value),
               itemName = e.target.dataset.name,
               itemClass = createproductID(itemName)
-            // debugger
             ht[itemName].itemCount = inputValue
 
             document.querySelector(`tr.${itemClass} .item-price`).textContent =
@@ -195,7 +192,6 @@ window.onload = (function () {
         let totalDiscount = discountArr.reduce((acc, curr) => {
           return acc + curr
         }, 0)
-        // debugger
         document.querySelector('.total-qty').textContent = totalQty
         document.querySelector('.total-price').textContent = totalPrice
         document.querySelector('.total-discounts').textContent = totalDiscount
