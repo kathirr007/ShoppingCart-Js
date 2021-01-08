@@ -1,0 +1,254 @@
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.align-center {
+    margin: 0 auto;
+}
+
+/* font-sizes starts */
+
+@for $i from 5 through 10 {
+    $size: $i * 2;
+
+    .fz-#{$size} {
+        font-size: #{$size}px;
+    }
+}
+
+
+/* font-sizes ends */
+
+// Box modal styles
+$dimensions: ('m': 'margin', 'p': 'padding');
+$directions: ('t': 'top', 'b': 'bottom', 'r': 'right', 'l': 'left');
+
+@each $dim in $dimensions {
+    @for $i from 0 through 6 {
+        $size: $i * 5;
+
+        .#{nth($dim, 1)}-#{$size} {
+            #{nth($dim, 2)}: #{$size}px !important;
+        }
+    }
+
+    @each $dir in $directions {
+        @for $i from 0 through 6 {
+            $size: $i * 5;
+
+            .#{nth($dim, 1)}#{nth($dir, 1)}-#{$size} {
+                #{nth($dim, 2)}-#{nth($dir, 2)}: #{$size}px !important;
+            }
+        }
+    }
+}
+
+.fw400 {
+    font-weight: 400 !important;
+}
+
+.fw600 {
+    font-weight: 600 !important;
+}
+
+.fw700 {
+    font-weight: 700 !important;
+}
+
+.truncate-text {
+    display: flex;
+    flex: 1;
+    width: 100%;
+
+    .text-ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.ff-c {
+    flex-flow: column;
+}
+
+.ff-r {
+    flex-flow: row;
+}
+
+/* Display styles start */
+
+.df-ac {
+    display: -webkit-flex !important;
+    display: -moz-flex !important;
+    display: -ms-flex !important;
+    display: -o-flex !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.df-ac-mob {
+    @extend .df-ac;
+
+    @media (max-width: 767px) {
+        flex-flow: column;
+        justify-content: center !important;
+    }
+}
+
+.df-ac-dcol {
+    @extend .df-ac;
+    flex-direction: column !important;
+}
+
+.df-ac-drow {
+    @extend .df-ac;
+    flex-direction: row !important;
+}
+
+.df-ac-jc {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.df-ac-jcsb {
+    @extend .df-ac;
+    justify-content: space-between !important;
+}
+
+.df-ac-jcfs {
+    @extend .df-ac;
+    justify-content: flex-start !important;
+}
+
+.df-ac-jcfe {
+    @extend .df-ac;
+    justify-content: flex-end !important;
+}
+
+.df-ac-jc-mob {
+    @extend .df-ac-jc;
+
+    @media (max-width: 767px) {
+        flex-flow: column !important;
+        justify-content: center !important;
+    }
+}
+
+.visible {
+    visibility: visible !important;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Display styles ends */
+
+// full width
+.full-width {
+    width: 100% !important;
+}
+
+.full-height {
+    height: 100% !important;
+}
+
+.auto-width {
+    width: auto !important;
+}
+
+.auto-height {
+    height: auto !important;
+}
+
+.lh-n {
+    line-height: normal !important;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,
+        background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
+
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+
+    &--outline {
+        color: #007bff;
+        border-color: #007bff;
+
+        &:hover {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    }
+}
+
+.text-no-wrap {
+    white-space: nowrap;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+
+    .card-footer {
+        padding: .75rem 1rem;
+        background-color: #ccc;
+        border-bottom-right-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+    }
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}

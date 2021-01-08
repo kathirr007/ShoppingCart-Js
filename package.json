@@ -10,6 +10,25 @@
   "author": "Kathirr007",
   "license": "MIT",
   "homepage": "https://github.com/kathirr007/ShoppingCart-Js#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-ignore": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-jsonminify": "^1.1.0",
+    "gulp-load-plugins": "^2.0.6",
+    "gulp-newer": "^1.4.0",
+    "gulp-preprocess": "^3.0.3",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "imagemin-pngcrush": "^7.0.0",
+    "node-sass": "^5.0.0"
+  },
   "dependencies": {}
 }

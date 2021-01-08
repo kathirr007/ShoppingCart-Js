@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Shopping Cart | Plain Javascript</title>
+  <script src="https://kit.fontawesome.com/df4e4a88c4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>All Items</h1>
+    </header>
+    <div class="main-content">
+      <section class="products-list" id="productsList">
+        <div class="product">
+          <div class="card">
+            <span class="discount-padge">
+              12% off
+            </span>
+            <div class="card-body">
+              <div class="product-image text-center">
+                <img
+                  src="https://rukminim1.flixcart.com/image/670/600/allinone-desktop/d/n/q/apple-imac-21-5-inch-4k-retina-core-i5-3-1ghz-8gb-1tb-intel-iris-original-imaeh5h83fuzbksz.jpeg?q=90"
+                  alt="Samsung Series 4">
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="product-name mb-5">
+                Samsung Series 4
+              </div>
+              <div class="df-ac-jcsb">
+                <div class="product-price">
+                  <span class="product-price--actual mr-5">Rs.66900</span>
+                  <span class="product-price--display">Rs.66900</span>
+                </div>
+                <div class="btn btn--outline">
+                  Add to cart
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside class="cart-section">
+        <h2 class="mb-0">Cart</h2>
+        <div class="cart-list">
+          <table class="table">
+            <thead>
+              <tr>
+                <th width="30%" align="center">Items</th>
+                <th width="40%" align="center">Qty</th>
+                <th width="30%" align="center">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td align="center">Item 1</td>
+                <td align="center">
+                  <div class="input-group mb-3">
+                    <button class="btn" type="button"><i
+                        class="fas fa-minus"></i></button>
+
+                    <input type="text" class="form-control" placeholder="1">
+                    <button class="btn" type="button"><i
+                        class="fas fa-plus"></i></button>
+                  </div>
+                </td>
+                <td align="center">Rs.150</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+        <div class="cart-overview mt-20 mb-20">
+          <div class="card">
+            <div class="card-body pt-10 pl-15 pr-15 pb-10">
+              <h4 class="m-0 mb-5">Total</h4>
+              <div class="items-details">
+                <span class="pull-left">
+                  Items [ <span class="total-qty">0</span> ]
+                </span>
+                <span class="pull-right text-right">
+                  Rs.<span class="total-price">0</span>
+                </span>
+              </div>
+              <div class="discount-details">
+                <span class="pull-left">
+                  Discount
+                </span>
+                <span class="pull-right text-right">
+                  Rs.<span class="total-discounts">0</span>
+                </span>
+              </div>
+              <div class="discount-type-details">
+                <span class="pull-left">
+                  Type Discount
+                </span>
+                <span class="pull-right text-right">
+                  Rs.0
+                </span>
+              </div>
+            </div>
+            <div class="card-footer total-price-details">
+              <span class="pull-left">Order Total</span>
+              <span class="order-total-price pull-right text-right">
+                Rs. <span class="order-total"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <script src="assets/js/scripts.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>
